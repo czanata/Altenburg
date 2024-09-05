@@ -56,7 +56,7 @@
                     });
 
                     Quagga.onDetected(function(data) {
-                        document.getElementById('barcode-result').textContent = data.codeResult.code + ',';
+                        document.getElementById('barcode-result').textContent += data.codeResult.code + ',';
                         Quagga.stop();
                         video.srcObject.getTracks().forEach(track => track.stop());
                     });
